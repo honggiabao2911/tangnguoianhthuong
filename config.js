@@ -3,7 +3,7 @@ window.BIRTHDAY_CONFIG = {
   password: '2108',
   music: './nhac.mp3',
   recipient: 'em yêu',
-  signature: 'Người luôn thương em',
+  signature: 'HỒNG GIA BẢO',
   photos: [
     {src:'./anh1.jpg',alt:'Ảnh yêu thích của em',caption:'Nụ cười anh thương',note:'Mong em luôn cười thật nhiều, hôm nay và cả những ngày sau.'},
     {src:'./anh2.jpg',alt:'Bức ảnh của hai đứa',caption:'Mình, cùng nhau',note:'Có em bên cạnh, những ngày bình thường cũng trở nên đặc biệt.'},
