@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: linear-gradient(135deg, #ffe0ec, #ffc2dc, #ff9fc9);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.welcome {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+}
+
+h1 {
+  font-size: clamp(28px, 6vw, 50px);
+  color: #e72979;
+  text-shadow: 0 3px 15px #fff;
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  color: #b82460;
+  font-size: 18px;
+}
+
+#startBtn {
+  margin-top: 20px;
+  padding: 16px 32px;
+  border: 0;
+  border-radius: 40px;
+  background: #ff4f9a;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 25px #e7297966;
+  transition: transform 0.2s;
+}
+
+#startBtn:hover {
+  transform: scale(1.08);
+  background: #ed287d;
+}
+
+.notification {
+  position: absolute;
+  width: 220px;
+  height: 135px;
+  background: linear-gradient(145deg, #fff0f7, #ffb9d7);
+  color: #c51b64;
+  border: 2px solid white;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px #d83a7966;
+  overflow: hidden;
+  z-index: 3;
+  animation: popIn 0.45s ease both;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 12px;
+  background: #ff72aa;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.notification p {
+  margin: 0;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.minimize-btn {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.heart {
+  position: absolute;
+  bottom: -40px;
+  font-size: 25px;
+  opacity: 0.6;
+  pointer-events: none;
+  animation: floatUp linear forwards;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.35) rotate(-8deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .notification {
+    width: 165px;
+    height: 110px;
+  }
+
+  .notification p {
+    height: 75px;
+    font-size: 18px;
+  }
+
+  .notification-header {
+    font-size: 12px;
+    padding: 5px 9px;
+  }
+}
